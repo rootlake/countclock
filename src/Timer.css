@@ -23,11 +23,12 @@
 }
 
 .time {
-  font-family: 'Roboto Mono', monospace;
-  font-size: 20vw;
-  font-weight: 700;
+  font-family: Impact, Haettenschweiler, 'Arial Black', sans-serif;
+  font-size: 30vw;
+  font-weight: 900;
+  letter-spacing: -0.02em;
   color: #ff0000;
-  text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  text-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
   transition: all 0.3s ease;
 }
 
@@ -72,6 +73,7 @@
   justify-content: center;
   gap: 10px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .time-presets button {
@@ -87,6 +89,15 @@
 
 .time-presets button:hover {
   background-color: #555;
+}
+
+/* Testing buttons styling */
+.test-btn {
+  background-color: #660000 !important;
+}
+
+.test-btn:hover {
+  background-color: #990000 !important;
 }
 
 .main-controls {
@@ -132,7 +143,7 @@
 /* Responsive font size adjustments */
 @media (max-width: 768px) {
   .time {
-    font-size: 25vw;
+    font-size: 36vw;
   }
   
   .timer-controls {
@@ -148,5 +159,12 @@
   .time-presets button {
     padding: 8px 12px;
     font-size: 14px;
+  }
+}
+
+/* For very tall screens, maximize width rather than height */
+@media (min-aspect-ratio: 1/1) {
+  .time {
+    font-size: 35vh;
   }
 } 
